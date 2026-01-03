@@ -5,6 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Turf Pro Inc. | Lawn Fertilizer Company | Serving Boston, Bristol & Norfolk Counties</title>
     <meta name="description" content="Family-owned lawn care company serving Massachusetts since 1986. Expert lawn fertilization, tick & mosquito control, aeration, and complete lawn care services.">
+    <meta name="keywords" content="lawn care Massachusetts, lawn fertilization, tick control, mosquito control, core aeration, grub control, Boston lawn care, Bristol County, Norfolk County">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Turf Pro Inc. | Professional Lawn Care Since 1986">
+    <meta property="og:description" content="Family-owned lawn care company serving Boston, Bristol & Norfolk Counties with eco-friendly, professional lawn fertilization and pest control services.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://turfproinc.com/">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Turf Pro Inc. | Professional Lawn Care Since 1986">
+    <meta name="twitter:description" content="Family-owned lawn care company serving Boston, Bristol & Norfolk Counties with eco-friendly, professional lawn fertilization and pest control services.">
+    
+    <link rel="canonical" href="https://turfproinc.com/">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Turf Pro Inc.",
+        "description": "Family-owned lawn care company serving Massachusetts since 1986. Expert lawn fertilization, tick & mosquito control, aeration, and complete lawn care services.",
+        "telephone": "(508) 543-7648",
+        "email": "TurfProInc@comcast.net",
+        "foundingDate": "1986",
+        "areaServed": [
+            {"@type": "AdministrativeArea", "name": "Boston County, Massachusetts"},
+            {"@type": "AdministrativeArea", "name": "Bristol County, Massachusetts"},
+            {"@type": "AdministrativeArea", "name": "Norfolk County, Massachusetts"}
+        ],
+        "serviceType": ["Lawn Fertilization", "Core Aeration", "Tick Control", "Mosquito Control", "Grub Control", "Weed Control"],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "500"
+        }
+    }
+    </script>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -75,6 +115,7 @@
                     <a href="#home" class="text-sm font-semibold text-brand-600">Home</a>
                     <a href="#services" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Services</a>
                     <a href="#programs" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Programs</a>
+                    <a href="/blog/" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Blog</a>
                     <a href="#contact" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Contact</a>
                 </div>
 
@@ -90,6 +131,7 @@
                 <a href="#home" class="block text-sm font-semibold text-brand-600">Home</a>
                 <a href="#services" class="block text-sm font-semibold text-slate-600 hover:text-brand-600">Services</a>
                 <a href="#programs" class="block text-sm font-semibold text-slate-600 hover:text-brand-600">Programs</a>
+                <a href="/blog/" class="block text-sm font-semibold text-slate-600 hover:text-brand-600">Blog</a>
                 <a href="#contact" class="block text-sm font-semibold text-slate-600 hover:text-brand-600">Contact</a>
             </div>
         </div>
@@ -138,20 +180,21 @@
 
                 <div class="bg-slate-100/95 p-8 rounded-2xl shadow-2xl border border-slate-300">
                     <h2 class="text-2xl font-bold text-slate-900 mb-6 text-center">Get a Free Quote</h2>
-                    <form class="space-y-4">
+                    <form id="hero-form" class="space-y-4">
                         <div>
-                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all">
+                            <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all">
                         </div>
                         <div class="grid grid-cols-2 gap-4">
-                            <input type="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all">
-                            <input type="tel" placeholder="Your Phone" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all">
+                            <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all">
+                            <input type="tel" name="phone" placeholder="Your Phone" required class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all">
                         </div>
                         <div>
-                            <textarea rows="4" placeholder="Please Enter Any Information" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all resize-none"></textarea>
+                            <textarea rows="4" name="message" placeholder="Please Enter Any Information" class="w-full px-4 py-3 rounded-lg border border-slate-200 focus:ring-2 focus:ring-brand-500 focus:border-transparent outline-none transition-all resize-none"></textarea>
                         </div>
                         <button type="submit" class="w-full bg-brand-600 text-white font-bold py-4 rounded-lg hover:bg-brand-700 transition-colors shadow-lg shadow-brand-500/30 flex items-center justify-center gap-2">
                             Request a Quote <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </button>
+                        <div id="hero-form-status" class="hidden text-center text-sm py-2 rounded-lg"></div>
                     </form>
                 </div>
             </div>
@@ -544,22 +587,23 @@
 
                 <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
                     <h3 class="text-2xl font-bold text-white mb-6 text-center">Quick Contact</h3>
-                    <form class="space-y-4">
+                    <form id="contact-form" class="space-y-4">
                         <div>
-                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none transition-all">
+                            <input type="text" name="name" placeholder="Your Name" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none transition-all">
                         </div>
                         <div>
-                            <input type="email" placeholder="Your Email" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none transition-all">
+                            <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none transition-all">
                         </div>
                         <div>
-                            <input type="tel" placeholder="Your Phone" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none transition-all">
+                            <input type="tel" name="phone" placeholder="Your Phone" required class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none transition-all">
                         </div>
                         <div>
-                            <textarea rows="3" placeholder="Message" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none transition-all resize-none"></textarea>
+                            <textarea rows="3" name="message" placeholder="Message" class="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:ring-2 focus:ring-white focus:border-transparent outline-none transition-all resize-none"></textarea>
                         </div>
                         <button type="submit" class="w-full bg-white text-brand-900 font-bold py-4 rounded-lg hover:bg-brand-50 transition-colors shadow-lg">
                             Send Message
                         </button>
+                        <div id="contact-form-status" class="hidden text-center text-sm py-2 rounded-lg"></div>
                     </form>
                 </div>
             </div>
@@ -590,11 +634,14 @@
                 <div>
                     <h4 class="text-white font-bold mb-6">Services</h4>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="#" class="hover:text-brand-500 transition-colors">Lawn Fertilization</a></li>
-                        <li><a href="#" class="hover:text-brand-500 transition-colors">Core Aeration</a></li>
-                        <li><a href="#" class="hover:text-brand-500 transition-colors">Grub & Insect Control</a></li>
-                        <li><a href="#" class="hover:text-brand-500 transition-colors">Tick & Mosquito Control</a></li>
-                        <li><a href="#" class="hover:text-brand-500 transition-colors">Weed Control</a></li>
+                        <li><a href="/services/lawn-fertilization.html" class="hover:text-brand-500 transition-colors">Lawn Fertilization</a></li>
+                        <li><a href="/services/core-aeration.html" class="hover:text-brand-500 transition-colors">Core Aeration</a></li>
+                        <li><a href="/services/grub-insect-prevention.html" class="hover:text-brand-500 transition-colors">Grub & Insect Control</a></li>
+                        <li><a href="/services/tick-mosquito-control.html" class="hover:text-brand-500 transition-colors">Tick & Mosquito Control</a></li>
+                    </ul>
+                    <h4 class="text-white font-bold mt-6 mb-4">Resources</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="/blog/" class="hover:text-brand-500 transition-colors">Lawn Care Blog</a></li>
                     </ul>
                 </div>
 
@@ -659,12 +706,59 @@
         });
 
         // Form handling
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                alert('Thank you for your inquiry! We will contact you shortly.');
-                this.reset();
-            });
+        async function handleFormSubmit(form, statusId) {
+            const status = document.getElementById(statusId);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            try {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Sending...';
+                
+                const formData = new FormData(form);
+                const data = {
+                    name: formData.get('name') || '',
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    message: formData.get('message') || ''
+                };
+                
+                const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                status.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-green-100', 'text-green-700');
+                
+                if (response.ok) {
+                    status.classList.add('bg-green-100', 'text-green-700');
+                    status.textContent = 'Thank you! Your message has been sent successfully.';
+                    form.reset();
+                } else {
+                    status.classList.add('bg-red-100', 'text-red-700');
+                    status.textContent = result.error || 'Failed to send. Please try again.';
+                }
+            } catch (error) {
+                status.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+                status.classList.add('bg-red-100', 'text-red-700');
+                status.textContent = 'Failed to send. Please call us at (508) 543-7648.';
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+            }
+        }
+        
+        document.getElementById('hero-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleFormSubmit(this, 'hero-form-status');
+        });
+        
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            handleFormSubmit(this, 'contact-form-status');
         });
     </script>
 </body>

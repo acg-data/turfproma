@@ -46,9 +46,9 @@
     <div class="bg-white border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <nav class="flex items-center text-sm" aria-label="Breadcrumb">
-                <a href="../index.html" class="text-slate-600 hover:text-brand-600 transition-colors">Home</a>
+                <a href="/index.html" class="text-slate-600 hover:text-brand-600 transition-colors">Home</a>
                 <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 mx-2"></i>
-                <a href="../index.html#services" class="text-slate-600 hover:text-brand-600 transition-colors">Services</a>
+                <a href="/index.html#services" class="text-slate-600 hover:text-brand-600 transition-colors">Services</a>
                 <i data-lucide="chevron-right" class="w-4 h-4 text-slate-400 mx-2"></i>
                 <span class="text-brand-600 font-semibold">Tick & Mosquito Control</span>
             </nav>
@@ -67,7 +67,7 @@
                         Professional tick and mosquito control that protects your family from disease-carrying pests. Our safe, effective treatments let you enjoy your outdoor space all season long.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="../index.html#contact" class="inline-flex items-center justify-center px-8 py-4 bg-brand-600 text-white font-bold rounded-xl hover:bg-brand-700 transition-colors shadow-lg shadow-brand-500/30">
+                        <a href="/index.html#contact" class="inline-flex items-center justify-center px-8 py-4 bg-brand-600 text-white font-bold rounded-xl hover:bg-brand-700 transition-colors shadow-lg shadow-brand-500/30">
                             Get Free Quote <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
                         </a>
                         <a href="tel:5085437648" class="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-900 font-bold rounded-xl hover:bg-slate-50 transition-colors border border-slate-200">
@@ -199,7 +199,7 @@
                 <h2 class="text-4xl font-bold text-white mb-6">Protect Your Family This Season</h2>
                 <p class="text-brand-100 text-lg mb-8 leading-relaxed">Don't let ticks and mosquitoes ruin your outdoor enjoyment. Schedule professional protection today and enjoy peace of mind all season long.</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="../index.html#contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-900 font-bold rounded-xl hover:bg-brand-50 transition-colors shadow-lg">
+                    <a href="/index.html#contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-900 font-bold rounded-xl hover:bg-brand-50 transition-colors shadow-lg">
                         Get Free Quote <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
                     </a>
                     <a href="tel:5085437648" class="inline-flex items-center justify-center px-8 py-4 bg-brand-700 text-white font-bold rounded-xl hover:bg-brand-600 transition-colors border border-brand-500">
@@ -216,7 +216,7 @@
     <script>
         lucide.createIcons();
 
-        fetch('../components/header.html')
+        fetch('/components/header.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('header').innerHTML = html;
@@ -232,7 +232,7 @@
                 }
             });
 
-        fetch('../components/footer.html')
+        fetch('/components/footer.html')
             .then(response => response.text())
             .then(html => {
                 document.getElementById('footer').innerHTML = html;
