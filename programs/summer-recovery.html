@@ -192,22 +192,7 @@
     </section>
 
     <!-- CTA -->
-    <section class="py-20 bg-brand-900 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto">
-                <h2 class="text-4xl font-bold text-white mb-6">Recover Your Lawn This Fall</h2>
-                <p class="text-brand-100 text-lg mb-8 leading-relaxed">Don't let summer stress carry into fall. Schedule your Summer Recovery treatment and give your lawn the boost it needs to recover and thrive through fall.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="/index.html#contact" class="inline-flex items-center justify-center px-8 py-4 bg-white text-brand-900 font-bold rounded-xl hover:bg-brand-50 transition-colors shadow-lg">
-                        Get Free Quote <i data-lucide="arrow-right" class="w-5 h-5 ml-2"></i>
-                    </a>
-                    <a href="tel:5085437648" class="inline-flex items-center justify-center px-8 py-4 bg-brand-700 text-white font-bold rounded-xl hover:bg-brand-600 transition-colors border border-brand-500">
-                        <i data-lucide="phone" class="w-5 h-5 mr-2"></i> (508) 543-7648
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div id="cta"></div>
 
     <!-- Footer -->
     <div id="footer"></div>
@@ -229,6 +214,13 @@
                         mobileMenu.classList.toggle('hidden');
                     });
                 }
+            });
+
+        fetch('/components/cta.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('cta').innerHTML = html;
+                lucide.createIcons();
             });
 
         fetch('/components/footer.html')
