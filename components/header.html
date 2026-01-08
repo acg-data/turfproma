@@ -24,8 +24,40 @@
 
             <div class="hidden md:flex items-center space-x-8">
                 <a href="/index.html" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Home</a>
-                <a href="/index.html#services" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Services</a>
-                <a href="/index.html#programs" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Programs</a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="/index.html#services" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors flex items-center gap-1">
+                        Services
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="bg-white rounded-xl shadow-xl border border-slate-100 py-3 min-w-[220px]">
+                            <a href="/services/core-aeration.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">Core Aeration</a>
+                            <a href="/services/grub-insect-prevention.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">Grub & Insect Prevention</a>
+                            <a href="/services/lawn-fertilization.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">Lawn Fertilization</a>
+                            <a href="/services/tick-mosquito-control.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">Tick & Mosquito Control</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Programs Dropdown -->
+                <div class="relative group">
+                    <a href="/index.html#programs" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors flex items-center gap-1">
+                        Programs
+                        <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+                    </a>
+                    <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                        <div class="bg-white rounded-xl shadow-xl border border-slate-100 py-3 min-w-[220px]">
+                            <a href="/programs/spring-starter.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">Spring Starter</a>
+                            <a href="/programs/spring-booster.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">Spring Booster</a>
+                            <a href="/programs/summer-strength.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">Summer Strength</a>
+                            <a href="/programs/fall-recovery.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">Fall Recovery</a>
+                            <a href="/programs/winter-protection.html" class="block px-4 py-2 text-sm text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition-colors">Winter Protection</a>
+                        </div>
+                    </div>
+                </div>
+                
                 <a href="/blog/" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Blog</a>
                 <a href="/index.html#contact" class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors">Contact</a>
             </div>
@@ -40,10 +72,30 @@
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
         <div class="px-4 py-4 space-y-3">
             <a href="/index.html" class="block text-sm font-semibold text-slate-600 hover:text-brand-600">Home</a>
-            <a href="/index.html#services" class="block text-sm font-semibold text-slate-600 hover:text-brand-600">Services</a>
-            <a href="/index.html#programs" class="block text-sm font-semibold text-slate-600 hover:text-brand-600">Programs</a>
-            <a href="/blog/" class="block text-sm font-semibold text-slate-600 hover:text-brand-600">Blog</a>
-            <a href="/index.html#contact" class="block text-sm font-semibold text-slate-600 hover:text-brand-600">Contact</a>
+            
+            <!-- Mobile Services -->
+            <div class="border-t border-slate-100 pt-3">
+                <p class="text-xs font-bold text-slate-400 uppercase mb-2">Services</p>
+                <a href="/services/core-aeration.html" class="block text-sm text-slate-600 hover:text-brand-600 py-1">Core Aeration</a>
+                <a href="/services/grub-insect-prevention.html" class="block text-sm text-slate-600 hover:text-brand-600 py-1">Grub & Insect Prevention</a>
+                <a href="/services/lawn-fertilization.html" class="block text-sm text-slate-600 hover:text-brand-600 py-1">Lawn Fertilization</a>
+                <a href="/services/tick-mosquito-control.html" class="block text-sm text-slate-600 hover:text-brand-600 py-1">Tick & Mosquito Control</a>
+            </div>
+            
+            <!-- Mobile Programs -->
+            <div class="border-t border-slate-100 pt-3">
+                <p class="text-xs font-bold text-slate-400 uppercase mb-2">Programs</p>
+                <a href="/programs/spring-starter.html" class="block text-sm text-slate-600 hover:text-brand-600 py-1">Spring Starter</a>
+                <a href="/programs/spring-booster.html" class="block text-sm text-slate-600 hover:text-brand-600 py-1">Spring Booster</a>
+                <a href="/programs/summer-strength.html" class="block text-sm text-slate-600 hover:text-brand-600 py-1">Summer Strength</a>
+                <a href="/programs/fall-recovery.html" class="block text-sm text-slate-600 hover:text-brand-600 py-1">Fall Recovery</a>
+                <a href="/programs/winter-protection.html" class="block text-sm text-slate-600 hover:text-brand-600 py-1">Winter Protection</a>
+            </div>
+            
+            <div class="border-t border-slate-100 pt-3">
+                <a href="/blog/" class="block text-sm font-semibold text-slate-600 hover:text-brand-600">Blog</a>
+                <a href="/index.html#contact" class="block text-sm font-semibold text-slate-600 hover:text-brand-600 mt-3">Contact</a>
+            </div>
         </div>
     </div>
 </nav>
