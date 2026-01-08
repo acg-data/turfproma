@@ -125,109 +125,8 @@
         </style>
     </head>
     <body class="bg-slate-50 text-slate-900 antialiased">
-        <!-- Top Bar -->
-        <div class="bg-brand-900 text-white py-2">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div
-                    class="flex flex-col sm:flex-row items-center justify-between gap-2 text-sm"
-                >
-                    <div class="flex items-center gap-2">
-                        <i data-lucide="phone" class="w-4 h-4"></i>
-                        <span>(508) 543-7648</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i data-lucide="mail" class="w-4 h-4"></i>
-                        <span>TurfProInc@comcast.net</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Navigation -->
-        <nav
-            class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-100 shadow-sm"
-        >
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-16 items-center">
-                    <a href="#home" class="flex items-center">
-                        <img
-                            src="/images/logo.png"
-                            alt="Turf Pro Inc."
-                            class="h-12"
-                        />
-                    </a>
-
-                    <div class="hidden md:flex items-center space-x-8">
-                        <a
-                            href="#home"
-                            class="text-sm font-semibold text-brand-600"
-                            >Home</a
-                        >
-                        <a
-                            href="#services"
-                            class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors"
-                            >Services</a
-                        >
-                        <a
-                            href="#programs"
-                            class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors"
-                            >Programs</a
-                        >
-                        <a
-                            href="/blog/"
-                            class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors"
-                            >Blog</a
-                        >
-                        <a
-                            href="#contact"
-                            class="text-sm font-semibold text-slate-600 hover:text-brand-600 transition-colors"
-                            >Contact</a
-                        >
-                    </div>
-
-                    <button
-                        id="mobile-menu-btn"
-                        class="md:hidden p-2 text-slate-600"
-                    >
-                        <i data-lucide="menu" class="h-6 w-6"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Mobile Menu -->
-            <div
-                id="mobile-menu"
-                class="hidden md:hidden bg-white border-t border-slate-100"
-            >
-                <div class="px-4 py-4 space-y-3">
-                    <a
-                        href="#home"
-                        class="block text-sm font-semibold text-brand-600"
-                        >Home</a
-                    >
-                    <a
-                        href="#services"
-                        class="block text-sm font-semibold text-slate-600 hover:text-brand-600"
-                        >Services</a
-                    >
-                    <a
-                        href="#programs"
-                        class="block text-sm font-semibold text-slate-600 hover:text-brand-600"
-                        >Programs</a
-                    >
-                    <a
-                        href="/blog/"
-                        class="block text-sm font-semibold text-slate-600 hover:text-brand-600"
-                        >Blog</a
-                    >
-                    <a
-                        href="#contact"
-                        class="block text-sm font-semibold text-slate-600 hover:text-brand-600"
-                        >Contact</a
-                    >
-                </div>
-            </div>
-        </nav>
+        <!-- Header -->
+        <div id="header"></div>
 
         <!-- Hero Section -->
         <section
@@ -1628,13 +1527,23 @@
         <script>
             lucide.createIcons();
 
-            // Mobile menu toggle
-            const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-            const mobileMenu = document.getElementById("mobile-menu");
+            // Load header component
+            fetch('/components/header.html')
+                .then(response => response.text())
+                .then(html => {
+                    document.getElementById('header').innerHTML = html;
+                    lucide.createIcons();
 
-            mobileMenuBtn.addEventListener("click", () => {
-                mobileMenu.classList.toggle("hidden");
-            });
+                    // Re-initialize mobile menu after header loads
+                    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                    const mobileMenu = document.getElementById('mobile-menu');
+
+                    if (mobileMenuBtn && mobileMenu) {
+                        mobileMenuBtn.addEventListener('click', () => {
+                            mobileMenu.classList.toggle('hidden');
+                        });
+                    }
+                });
 
             // FAQ accordion
             function toggleFaq(button) {
