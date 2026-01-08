@@ -364,26 +364,22 @@
 
                         <!-- Form -->
                         <form id="hero-form" class="space-y-4">
-                            <div class="bg-white rounded-md p-4">
-                                <p class="text-slate-600 text-sm mb-3">Select Service(s) - Choose all that apply*</p>
-                                <div class="space-y-2">
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" name="service" value="Lawn Fertilization Plan" class="w-4 h-4 rounded border-slate-300 text-brand-500 focus:ring-brand-500">
-                                        <span class="text-slate-800 text-sm">Lawn Fertilization Plan</span>
-                                    </label>
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" name="service" value="Mosquito & Tick Control" class="w-4 h-4 rounded border-slate-300 text-brand-500 focus:ring-brand-500">
-                                        <span class="text-slate-800 text-sm">Mosquito & Tick Control</span>
-                                    </label>
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" name="service" value="Aeration" class="w-4 h-4 rounded border-slate-300 text-brand-500 focus:ring-brand-500">
-                                        <span class="text-slate-800 text-sm">Aeration</span>
-                                    </label>
-                                    <label class="flex items-center gap-2 cursor-pointer">
-                                        <input type="checkbox" name="service" value="Aeration + Overseed" class="w-4 h-4 rounded border-slate-300 text-brand-500 focus:ring-brand-500">
-                                        <span class="text-slate-800 text-sm">Aeration + Overseed</span>
-                                    </label>
-                                </div>
+                            <div class="relative">
+                                <select
+                                    name="service"
+                                    class="w-full h-12 px-4 rounded-md text-slate-800 bg-white border-none focus:ring-2 focus:ring-brand-500 appearance-none cursor-pointer"
+                                >
+                                    <option value="">Select Service(s)*</option>
+                                    <option value="Lawn Fertilization Plan">Lawn Fertilization Plan</option>
+                                    <option value="Mosquito & Tick Control">Mosquito & Tick Control</option>
+                                    <option value="Aeration">Aeration</option>
+                                    <option value="Aeration + Overseed">Aeration + Overseed</option>
+                                    <option value="Multiple Services">Multiple Services (We'll discuss)</option>
+                                </select>
+                                <i
+                                    data-lucide="chevron-down"
+                                    class="absolute right-4 top-3.5 text-slate-400 pointer-events-none w-5 h-5"
+                                ></i>
                             </div>
 
                             <input
@@ -578,25 +574,25 @@
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
                     <a href="services/core-aeration.html" class="group">
                         <div
-                            class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full"
+                            class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full flex flex-col"
                         >
                             <div
-                                class="bg-brand-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-4"
+                                class="bg-brand-50 w-12 h-12 rounded-xl flex items-center justify-center mb-3"
                             >
                                 <i
                                     data-lucide="wind"
-                                    class="w-8 h-8 text-brand-600"
+                                    class="w-6 h-6 text-brand-600"
                                 ></i>
                             </div>
                             <h3
-                                class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors"
+                                class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors"
                             >
                                 Core Aeration
                             </h3>
-                            <p class="text-slate-600 text-sm leading-relaxed">
+                            <p class="text-slate-600 text-sm leading-relaxed flex-grow">
                                 Improves airflow, water movement, and nutrient
                                 uptake to support strong root development and
                                 long-term lawn health.
@@ -618,22 +614,22 @@
                         class="group"
                     >
                         <div
-                            class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full"
+                            class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full flex flex-col"
                         >
                             <div
-                                class="bg-brand-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-4"
+                                class="bg-brand-50 w-12 h-12 rounded-xl flex items-center justify-center mb-3"
                             >
                                 <i
                                     data-lucide="bug"
-                                    class="w-8 h-8 text-brand-600"
+                                    class="w-6 h-6 text-brand-600"
                                 ></i>
                             </div>
                             <h3
-                                class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors"
+                                class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors"
                             >
                                 Grub & Insect Prevention
                             </h3>
-                            <p class="text-slate-600 text-sm leading-relaxed">
+                            <p class="text-slate-600 text-sm leading-relaxed flex-grow">
                                 Protect your lawn from damaging pests. Our
                                 insect control keeps your lawn healthy, safe,
                                 and well-protected.
@@ -652,22 +648,22 @@
 
                     <a href="services/lawn-fertilization.html" class="group">
                         <div
-                            class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full"
+                            class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full flex flex-col"
                         >
                             <div
-                                class="bg-brand-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-4"
+                                class="bg-brand-50 w-12 h-12 rounded-xl flex items-center justify-center mb-3"
                             >
                                 <i
                                     data-lucide="flask-conical"
-                                    class="w-8 h-8 text-brand-600"
+                                    class="w-6 h-6 text-brand-600"
                                 ></i>
                             </div>
                             <h3
-                                class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors"
+                                class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors"
                             >
                                 Lawn Fertilization
                             </h3>
-                            <p class="text-slate-600 text-sm leading-relaxed">
+                            <p class="text-slate-600 text-sm leading-relaxed flex-grow">
                                 Season-long fertilizer programs designed to
                                 support healthy, green growth all season.
                             </p>
@@ -685,22 +681,22 @@
 
                     <a href="services/tick-mosquito-control.html" class="group">
                         <div
-                            class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full"
+                            class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full flex flex-col"
                         >
                             <div
-                                class="bg-brand-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-4"
+                                class="bg-brand-50 w-12 h-12 rounded-xl flex items-center justify-center mb-3"
                             >
                                 <i
                                     data-lucide="shield"
-                                    class="w-8 h-8 text-brand-600"
+                                    class="w-6 h-6 text-brand-600"
                                 ></i>
                             </div>
                             <h3
-                                class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors"
+                                class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors"
                             >
                                 Tick & Mosquito Control
                             </h3>
-                            <p class="text-slate-600 text-sm leading-relaxed">
+                            <p class="text-slate-600 text-sm leading-relaxed flex-grow">
                                 Helps keep your outdoor living areas more
                                 comfortable by managing ticks and mosquitoes
                                 throughout the season.
@@ -719,22 +715,22 @@
 
                     <div class="group">
                         <div
-                            class="bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full"
+                            class="bg-white p-5 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-100 h-full flex flex-col"
                         >
                             <div
-                                class="bg-brand-50 w-16 h-16 rounded-2xl flex items-center justify-center mb-4"
+                                class="bg-brand-50 w-12 h-12 rounded-xl flex items-center justify-center mb-3"
                             >
                                 <i
                                     data-lucide="sprout"
-                                    class="w-8 h-8 text-brand-600"
+                                    class="w-6 h-6 text-brand-600"
                                 ></i>
                             </div>
                             <h3
-                                class="text-xl font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors"
+                                class="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-600 transition-colors"
                             >
                                 Overseeding
                             </h3>
-                            <p class="text-slate-600 text-sm leading-relaxed">
+                            <p class="text-slate-600 text-sm leading-relaxed flex-grow">
                                 Add fresh seed to thicken turf and introduce
                                 improved grass varieties that better handle
                                 stress, disease, and wear.
@@ -767,7 +763,7 @@
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
                     <a href="programs/spring-starter.html" class="group">
                         <div
                             class="relative bg-gradient-to-br from-brand-50 to-white p-8 rounded-2xl border border-brand-100 hover:shadow-xl transition-all h-full"
@@ -919,7 +915,9 @@
                             </div>
                         </div>
                     </a>
+                </div>
 
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
                     <a href="programs/fall-recovery.html" class="group">
                         <div
                             class="relative bg-gradient-to-br from-brand-50 to-white p-8 rounded-2xl border border-brand-100 hover:shadow-xl transition-all h-full"
@@ -1657,12 +1655,11 @@
                     submitBtn.innerHTML = "Sending...";
 
                     const formData = new FormData(form);
-                    const services = formData.getAll("service");
-                    const serviceList = services.length > 0 ? services.join(", ") : "";
+                    const service = formData.get("service") || "";
                     const address = formData.get("address") || "";
                     const messageText = formData.get("message") || "";
                     const fullMessage = [
-                        serviceList ? `Service(s): ${serviceList}` : "",
+                        service ? `Service: ${service}` : "",
                         address ? `Address: ${address}` : "",
                         messageText,
                     ]
