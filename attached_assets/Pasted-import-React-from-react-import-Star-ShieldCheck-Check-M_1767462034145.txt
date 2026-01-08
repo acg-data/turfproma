@@ -63,7 +63,7 @@ const LawnCareHero = () => {
 
           {/* Subtext */}
           <p className="text-[#e2e8f0] text-lg max-w-xl leading-relaxed">
-            With over 20 years in the turf industry, our team is ready to transform your yard. 
+            With over 40 years in the turf industry, our team is ready to transform your yard. 
             We provide lush fertilization and dangerous pest removal. 
             <span className="font-bold text-white"> We know you will be thrilled with the finished product.</span>
           </p>
