@@ -47,10 +47,10 @@ async function getResendClient() {
 
 app.post('/api/contact', async (req, res) => {
   try {
-    const { name, email, phone, message } = req.body;
+    const { name, email, phone, message, service, address } = req.body;
 
-    if (!email || !phone) {
-      return res.status(400).json({ error: 'Email and phone are required' });
+    if (!phone) {
+      return res.status(400).json({ error: 'Phone number is required' });
     }
 
     const { client, fromEmail } = await getResendClient();
@@ -58,8 +58,10 @@ app.post('/api/contact', async (req, res) => {
     const emailContent = `
 New lead from Turf Pro website:
 
+Service Requested: ${service || 'Not specified'}
+Address: ${address || 'Not provided'}
 Name: ${name || 'Not provided'}
-Email: ${email}
+Email: ${email || 'Not provided'}
 Phone: ${phone}
 Message: ${message || 'No message provided'}
 
@@ -70,13 +72,21 @@ This lead was submitted through the Turf Pro Inc. website contact form.
     const htmlContent = `
 <h2>New Lead from Turf Pro Website</h2>
 <table style="border-collapse: collapse; width: 100%; max-width: 600px;">
+  <tr style="border-bottom: 1px solid #e2e8f0; background-color: #f0fdf4;">
+    <td style="padding: 12px; font-weight: bold; color: #166534;">Service:</td>
+    <td style="padding: 12px; color: #166534; font-weight: bold;">${service || 'Not specified'}</td>
+  </tr>
+  <tr style="border-bottom: 1px solid #e2e8f0; background-color: #f0fdf4;">
+    <td style="padding: 12px; font-weight: bold; color: #166534;">Address:</td>
+    <td style="padding: 12px; color: #166534;">${address || 'Not provided'}</td>
+  </tr>
   <tr style="border-bottom: 1px solid #e2e8f0;">
     <td style="padding: 12px; font-weight: bold; color: #475569;">Name:</td>
     <td style="padding: 12px; color: #1e293b;">${name || 'Not provided'}</td>
   </tr>
   <tr style="border-bottom: 1px solid #e2e8f0;">
     <td style="padding: 12px; font-weight: bold; color: #475569;">Email:</td>
-    <td style="padding: 12px; color: #1e293b;"><a href="mailto:${email}">${email}</a></td>
+    <td style="padding: 12px; color: #1e293b;">${email ? `<a href="mailto:${email}">${email}</a>` : 'Not provided'}</td>
   </tr>
   <tr style="border-bottom: 1px solid #e2e8f0;">
     <td style="padding: 12px; font-weight: bold; color: #475569;">Phone:</td>
